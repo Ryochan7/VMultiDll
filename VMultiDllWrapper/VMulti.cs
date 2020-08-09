@@ -33,6 +33,11 @@ namespace VMultiDllWrapper
         [DllImport("VMultiDll.dll")]
         public static extern bool vmulti_update_keyboard(IntPtr vmulti, byte shiftKeyFlags, byte[] keyCodes);
 
+        [DllImport("VMultiDll.dll")]
+        internal static extern bool vmulti_update_relative_mouse(IntPtr vmulti, byte buttons, byte x, byte y, byte wheelPosition);
+        [DllImport("VMultiDll.dll")]
+        internal static extern bool vmulti_update_relative_mouse_hwheel(IntPtr vmulti, byte buttons, ushort x, ushort y, byte wheelPosition, byte hWheelPosition);
+
         private IntPtr vmulti;
         private bool connected;
 
@@ -96,5 +101,16 @@ namespace VMultiDllWrapper
             }
         }
 
+        public virtual bool updateMouse(RelativeMouseReport report)
+        {
+            if (connected)
+            {
+                return vmulti_update_relative_mouse_hwheel(vmulti, (byte)report.Buttons, report.MouseX, report.MouseY, report.WheelPosition, report.HWheelPosition);
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

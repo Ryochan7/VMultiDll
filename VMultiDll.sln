@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VMultiDll", "VMultiDll\VMultiDll.vcxproj", "{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}"
 EndProject
@@ -44,7 +44,6 @@ Global
 		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|Win32.Build.0 = Release|Win32
 		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|Win32.Deploy.0 = Release|Win32
 		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|x64.ActiveCfg = Release|x64
-		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|x64.Build.0 = Release|x64
 		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|x64.Deploy.0 = Release|x64
 		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|x86.ActiveCfg = Release|Win32
 		{3C94F8A0-8F51-47B6-91E5-FBB0BD3E5C44}.Release|x86.Build.0 = Release|Win32
@@ -63,8 +62,8 @@ Global
 		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|Mixed Platforms.Build.0 = Release|x86
 		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|Win32.ActiveCfg = Release|Any CPU
-		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|x64.ActiveCfg = Release|Any CPU
-		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|x64.Build.0 = Release|Any CPU
+		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|x64.ActiveCfg = Release|x64
+		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|x64.Build.0 = Release|x64
 		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|x86.ActiveCfg = Release|Any CPU
 		{22020466-69C1-488D-B0EB-93DB380F2871}.Release|x86.Build.0 = Release|Any CPU
 		{2C96C636-972D-4251-A350-52FB606AF440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -82,11 +81,13 @@ Global
 		{2C96C636-972D-4251-A350-52FB606AF440}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2C96C636-972D-4251-A350-52FB606AF440}.Release|Win32.ActiveCfg = Release|Any CPU
 		{2C96C636-972D-4251-A350-52FB606AF440}.Release|x64.ActiveCfg = Release|x64
-		{2C96C636-972D-4251-A350-52FB606AF440}.Release|x64.Build.0 = Release|x64
 		{2C96C636-972D-4251-A350-52FB606AF440}.Release|x86.ActiveCfg = Release|x86
 		{2C96C636-972D-4251-A350-52FB606AF440}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0791DD44-0543-4119-9FCC-1DFA6AA8C388}
 	EndGlobalSection
 EndGlobal
