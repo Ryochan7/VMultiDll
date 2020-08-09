@@ -9,8 +9,8 @@ namespace VMultiDllWrapper
 {
     public class VMulti
     {
-        [DllImport("VMultiDll.dll")]
-        public static extern void HelloWorld();
+        //[DllImport("VMultiDll.dll")]
+        //public static extern void HelloWorld();
 
         [DllImport("VMultiDll.dll")]
         public static extern IntPtr vmulti_alloc();
