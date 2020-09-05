@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace VMultiDllWrapper
 {
+    [SuppressUnmanagedCodeSecurity]
     public class VMulti
     {
         //[DllImport("VMultiDll.dll")]
@@ -32,6 +34,8 @@ namespace VMultiDllWrapper
 
         [DllImport("VMultiDll.dll")]
         public static extern bool vmulti_update_keyboard(IntPtr vmulti, byte shiftKeyFlags, byte[] keyCodes);
+        [DllImport("VMultiDll.dll")]
+        public static extern bool vmulti_update_keyboard_enhanced(IntPtr vmulti, byte multiKeys, byte extraKeys);
 
         [DllImport("VMultiDll.dll")]
         internal static extern bool vmulti_update_relative_mouse(IntPtr vmulti, byte buttons, byte x, byte y, byte wheelPosition);
@@ -94,6 +98,18 @@ namespace VMultiDllWrapper
             if (connected)
             {
                 return vmulti_update_keyboard(vmulti, report.getRawShiftKeyFlags(), report.getRawKeyCodes());
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public virtual bool updateKeyboardEnhanced(KeyboardEnhancedReport report)
+        {
+            if (connected)
+            {
+                return vmulti_update_keyboard_enhanced(vmulti, (byte)report.MediaKeys, (byte)report.EnhancedKeys);
             }
             else
             {

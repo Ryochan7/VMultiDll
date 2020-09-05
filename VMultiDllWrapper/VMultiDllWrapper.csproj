@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JoystickReport.cs" />
+    <Compile Include="KeyboardEnhancedReport.cs" />
     <Compile Include="KeyboardReport.cs" />
     <Compile Include="MultitouchReport.cs" />
     <Compile Include="RelativeMouseReport.cs" />
